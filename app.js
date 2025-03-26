@@ -36,6 +36,40 @@ if (bar && cross && headerbar) { // Check if elements exist
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const bar = document.querySelector('.bar');
+    const mainNav = document.querySelector('.main-nav');
+    
+    // Create close button for mobile
+    const closeBtn = document.createElement('div');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.classList.add('close-menu');
+    closeBtn.style.cssText = `
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    `;
+    mainNav.appendChild(closeBtn);
+    
+    // Toggle menu
+    bar.addEventListener('click', function() {
+        mainNav.classList.add('active');
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        mainNav.classList.remove('active');
+    });
+    
+    // Close menu when clicking on links
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mainNav.classList.remove('active');
+        });
+    });
+});
 
 // ** Simulated Payment Functionality **
 function processPayment(paymentMethod, amount, meal, paymentDetails) {

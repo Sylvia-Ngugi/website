@@ -23,55 +23,36 @@
 
 <body>
     <header>
-        <div class="header">
-            <div class="headerbar">
-                <div class="account">
+        <div class="header-container">
+            <div class="logo">
+                <img src="./Images/logo.png" alt="DineWithSly Restaurant Logo">  <!-- Improved alt attribute -->
+            </div>
+               
+            <div class="bar">☰</div>
+
+                <nav class="main-nav" role="navigation">  <!-- Added role="navigation" -->
                     <ul>
-                        <li>
-                            <a href="#" aria-label="Home">  <!-- Added aria-label -->
-                                <i class="fa-solid fa-house-chimney"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button aria-label="Search" id="searchicon1">  <!-- Changed to button, added aria-label -->
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                            <div class="search" id="searchinput1">
-                                <input type="search" placeholder="Search..." aria-label="Search the site">  <!-- Added aria-label -->
-                                <i class="fa-solid fa-magnifying-glass srchicon"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="User Account">  <!-- Added aria-label -->
-                                <i class="fa-solid fa-user" id="user-ab"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <nav role="navigation">  <!-- Added role="navigation" -->
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About-us</a></li>
-                        <li><a href="#">Food Menu</a></li>
-                        <li><a href="#">Book Table</a></li>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About-us">About-us</a></li>
+                        <li><a href="#Food Menu">Food Menu</a></li>
+                        <li><a href="#Book Table">Book Table</a></li>
+                        <li><a href="#Make Payment">Make Payment</a></li>
                     </ul>
                 </nav>
             </div>
     
-            <div class="logo">
-                <img src="./Images/logo.png" alt="DineWithSly Restaurant Logo">  <!-- Improved alt attribute -->
-            </div>
+            
         </div>
     </header>
 
-    <div class="home">
+    <div class="home" id="Home">
         <div class="main_slide">
             <div>
-                <h1>Enjoy <span>Delicious Food</span>in Your Healthy Life</h1>
+                <h1>Enjoy <span>Delicious Food</span> in Your Healthy Life</h1>
                 <p>Welcome to Dine with Sly: Savor our signature dishes, crafted with love, in a cozy atmosphere where
                     every bite tells a story of flavor and joy.</p>
 
-                <button class="red_btn">Visit Now <i class="fa-solid fa-arrow-right-long"></i></button>
+                    <button class="red_btn">WELCOME!<i class="fa-solid "></i></button>
             </div>
             <div>
                 <img src="./Images/foodplate.png" alt="">
@@ -129,9 +110,8 @@
                             <img src="./Images/plate3.png" alt="">
                         </div>
                         <div>
-                            <h4>Choose your Favourite <br>Savouring Moments, One Bite at a Time</h4>
-                            <p>Dine with Sly offers a delicious experience! <br>Fresh ingredients, bold flavors, and
-                                satisfying meals. <br>That's the Dine with Sly promise!"</p>
+                            <h4>Where Every Meal Feels Like Home!<br>Emphasizing comfort and a welcoming dining experience.</h4>
+                            <p>Highlighting the joy and satisfaction your food brings <br>Bold Flavors<br>Bigger Smiles—That’s How We Serve!</p>
                         </div>
                     </div>
                     <div class="q-ans">
@@ -139,9 +119,8 @@
                             <img src="./Images/plate4.png" alt="">
                         </div>
                         <div>
-                            <h4>Choose your Favourite <br>Savouring Moments, One Bite at a Time</h4>
-                            <p>Dine with Sly offers a delicious experience! <br>Fresh ingredients, bold flavors, and
-                                satisfying meals. <br>That's the Dine with Sly promise!"</p>
+                            <h4>Bite. Smile. Repeat!<br>Eat here. Laugh here. Come back here</h4>
+                            <p>Sly’s Kitchen: Where Flavors Sneak Up and Steal Your Heart! <br>Taste magic, not menus<br>Your taste buds’ new BFF.</p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +128,7 @@
         </div>
     </div>
 
-    <div class="About-us">
+    <div class="About-us" id="About-us">
         <div class="About-image">
             <img src="./Images/plate9.jpg" alt="About DineWithSly">
         </div>
@@ -164,18 +143,19 @@
             <p>More than just a restaurant, DineWithSly is a place to create memories. Whether you're celebrating a
                 special occasion or simply enjoying a meal with loved ones, we're committed to providing you with an
                 exceptional dining experience.</p>
-            <button class="red_btn">Learn More</button>
+            <button class="red_btn">SLY BITES!</button>
         </div>
     </div>
 
 
-    <div class="main_slide3">
+    <div class="main_slide3" id="Food Menu">
         <div class="fav-head">
             <h3>Our Popular Food Items</h3>
             <p>Dine with Sly is renowned for its expertly prepared dishes, especially our juicy burgers piled high with
                 fresh toppings and our crispy, golden-brown fried chicken, seasoned with our secret spice blend. Don't
                 miss our creamy, decadent milkshakes, the perfect sweet treat to complete your meal!</p>
         </div>
+        <h4>Main Courses</h4>
         <div class="fav-food">
             <div class="Item">
                 <div>
@@ -258,15 +238,214 @@
                 <div>
                     <img src="./Images/plate14.png" alt="">
                 </div>
-                <h1>SOUTHWEST QUESADILLA</h1>
+                <h1>Southwest Quesadilla</h1>
                 <p>Marinated chicken or beef with grilled onions and mozzarella cheese in tortillas. Served with sour cream and guacamole.</p>
                 <p class="fav-price">2000/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/MUKIMO.png" alt="">
+                </div>
+                <h1>Mukimo with grilled beef</h1>
+                <p>Traditional Kenyan dish (mashed greens and corn) paired with tender grilled beef, slow-cooked to perfection.</p>
+                <p class="fav-price">750/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/pizza.png" alt="">
+                </div>
+                <h1>Pizza</h1>
+                <p>Freshly baked crust loaded with melted cheese, savory sauce, and your choice of toppings. Crispy, cheesy, and made to satisfy!</p>
+                <p class="fav-price">1000/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/cb.png" alt="">
+                </div>
+                <h1>Chicken Biryani</h1>
+                <p>Aromatic basmati rice infused with spices and marinated chicken, slow-cooked to tender perfection. A flavorful, filling meal!</p>
+                <p class="fav-price">500/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/vc.png" alt="">
+                </div>
+                <h1>Vegetable Curry</h1>
+                <p>Rich, creamy curry packed with tender vegetables and a hint of spice. Served with fluffy rice or roti for a comforting meal!</p>
+                <p class="fav-price">1250/=</p>
             </div>
         </div>
         <div class="dsgn"></div>
     </div>
 
-    <div class="book-table">
+    <div class="main_slide5" id="Food Menu">
+        <div class="fav-head">
+            <h3>Start Your Meal Right</h3>
+            <p>Begin your Dine with Sly experience with our tempting appetizers!<br> From crispy samosas to flavorful
+                wings, each bite is crafted to awaken your taste buds and prepare you for the delicious journey ahead.</p>
+        </div>
+    
+        <h4>Appetizers</h4>
+        <div class="fav-food">
+            <div class="Item">
+                <div>
+                    <img src="./Images/samosas.png" alt="Samosas">
+                </div>
+                <h1>Samosas</h1>
+                <p>Crispy fried pastries filled with spiced potatoes, peas, or meat. A classic starter!</p>
+                <p class="fav-price">350/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/springrolls.png" alt="Spring Rolls">
+                </div>
+                <h1>Spring Rolls</h1>
+                <p>Savory rolls filled with vegetables, served fried. A light and tasty start.</p>
+                <p class="fav-price">350/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/chipsmasala.png" alt="Chips Masala">
+                </div>
+                <h1>Chips Masala</h1>
+                <p>Thinly sliced fried potatoes tossed in a spicy tomato-based masala sauce.</p>
+                <p class="fav-price">300/=</p>
+            </div>
+            <div class="Item">
+                <div>
+                    <img src="./Images/friedplantains.png" alt="Fried Plantain">
+                </div>
+                <h1>Fried Plantain</h1>
+                <p>Sliced plantains fried until golden and crispy, a sweet and savory treat.</p>
+                <p class="fav-price">250/=</p>
+            </div>
+             <div class="Item">
+                <div>
+                    <img src="./Images/wings.png" alt="Wings">
+                </div>
+                <h1>Wings</h1>
+                <p>Juicy chicken wings tossed in your choice of BBQ, jerk, or buffalo sauce.</p>
+                <p class="fav-price">600/=</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main_slide6" id="Food Menu">
+        <div class="fav-head">
+            <h3>Quench Your Thirst</h3>
+            <p>Discover our delightful array of refreshing beverages at Dine with Sly! <br>From handcrafted lemonades to creamy milkshakes, we have the perfect drink to complement your meal.</p>
+        </div>
+    
+        <h4>Our Drinks</h4>
+        <div class="fav-food">
+            <div class="Item">
+                <div>
+                    <img src="./Images/dawatea.png" alt="Dawa Tea">
+                </div>
+                <h1>  <br> Dawa Tea</h1>
+                <p>A signature herbal tea blend, available in classic, mint, basil, or cinnamon garlic flavors.</p>
+                <p class="fav-price">400/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/icedmocha.png" alt="Iced Mocha">
+                </div>
+                <h1><br>Iced Mocha</h1>
+                <p>Rich espresso, chocolate syrup, and ice, topped with whipped cream. A chocolate lover's dream!</p>
+                <p class="fav-price">500/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/lemonade.png" alt="Handcrafted Lemonade">
+                </div>
+                <h1>   <br> Crafted Lemonade</h1>
+                <p>Refreshing lemonade made with fresh lemons, available in classic and fruity variations.</p>
+                <p class="fav-price">450/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/nojito.png" alt="Signature Nojito">
+                </div>
+                <h1>    <br> Signature Nojito</h1>
+                <p>A minty, citrusy non-alcoholic mojito. The perfect thirst quencher on a hot day!</p>
+                <p class="fav-price">500/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/juice.png" alt="Fresh Juice">
+                </div>
+                <h1>  <br>  Fresh Juice</h1>
+                <p>A daily selection of freshly squeezed juices made with seasonal fruits.</p>
+                <p class="fav-price">450/=</p>
+            </div>
+        </div>
+        <div class="dsgn"></div>
+    </div>
+    
+    <div class="main_slide7" id="Food Menu">
+        <div class="fav-head">
+            <h3>Sweet Treats to End Your Meal</h3>
+            <p>Indulge in our decadent desserts at Dine with Sly! <br> From creamy milkshakes to rich cheesecakes, every bite is a celebration of sweetness.</p>
+        </div>
+    
+        <h4>Desserts</h4>
+        <div class="fav-food">
+            <div class="Item">
+                <div>
+                    <img src="./Images/velvet.png" alt="Red Velvet Milkshake">
+                </div>
+                <h1>Red Velvet Milkshake</h1>
+                <p>A creamy blend of red velvet cake and ice cream, topped with chocolate shavings.</p>
+                <p class="fav-price">600/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/oreo.png" alt="Oreo Milkshake">
+                </div>
+                <h1><br>Oreo Milkshake</h1>
+                <p>Cookies-and-cream goodness blended with crushed Oreos and vanilla ice cream.</p>
+                <p class="fav-price">550/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/cheesecake.png" alt="Cheesecake">
+                </div>
+                <h1>Cheesecake</h1>
+                <p>Classic cheesecake topped with your choice of strawberry or caramel drizzle.</p>
+                <p class="fav-price">600/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/amazing.png" alt="Amazing Sundae">
+                </div>
+                <h1>Amazing Sundae</h1>
+                <p>Ice cream loaded with nuts, chocolate sauce, and whipped cream for the perfect treat.</p>
+                <p class="fav-price">650/=</p>
+            </div>
+    
+            <div class="Item">
+                <div>
+                    <img src="./Images/brown.png" alt="Brownie Milkshake">
+                </div>
+                <h1>Brownie Milkshake</h1>
+                <p>A rich milkshake featuring fudgy brownie chunks blended with vanilla ice cream.</p>
+                <p class="fav-price">600/=</p>
+            </div>
+        </div>
+    
+        <!-- Decorative Design -->
+        <div class="dsgn"></div>
+    </div>
+
+    
+    <div class="book-table" id="Book Table">
         <div class="book-heading">
             <h2>Reserve Your Table</h2>
             <p>Experience unforgettable dining. Book your table now!</p>
@@ -310,7 +489,7 @@
     </div>
 
     <!-- ** PAYMENT SECTION ** -->
-    <div class="payment-section">
+    <div class="payment-section" id="Make Payment">
         <h3>Make a Payment</h3>
     
         <label for="meal">Meal:</label>
@@ -410,6 +589,7 @@
     </div>
 
     </div>
+
     <footer>
         <div class="footer">
             <div class="footer-1">

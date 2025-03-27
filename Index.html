@@ -35,9 +35,9 @@
                         <li><a href="#Home">Home</a></li>
                         <li><a href="#About-us">About-us</a></li>
                         <li><a href="#Food Menu">Food Menu</a></li>
-                        <li><a href="#Book Table">Book Table</a></li>
+                        <li><a href="#Book Table" onclick="checkLoginAndBook(); return false;">Book Table</a></li>
                         <li><a href="#Make Payment">Make Payment</a></li>
-                        <li><a href="#auth">Login/Signup</a></li>
+                        <li><a href="#" onclick="showAuthForm('check'); return false;">Login/Signup</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,8 +47,10 @@
     </header>
 
 <!-- Login and Signup Section -->
-<div class="auth-section" id="auth">
+<div class="auth-section" id="auth" style="display: none;">
     <div class="auth-container">
+        <span class="close-auth" onclick="hideAuthSection()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
+        <div id="dynamic-auth-form"></div>
         <div class="signup-form" id="signup-form">
             <h2>Sign Up</h2>
             <form id="signupForm">

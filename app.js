@@ -1,69 +1,85 @@
  // script.js
+ let isLoggedIn = false;
+let hasAccount = false;
 
- // ** Simplified Search Icon Toggle **
- function setupSearchToggle(searchIconId, searchInputId) {
-    const searchIcon = document.querySelector(searchIconId);
-    const searchInput = document.querySelector(searchInputId);
-
-    if (searchIcon && searchInput) { // Check if elements exist
-        searchIcon.addEventListener('click', function() {
-            searchInput.style.display = 'flex';
-            searchIcon.style.display = 'none';
-        });
+function showAuthSection(showLogin = false) {
+    const authSection = document.getElementById('auth');
+    authSection.style.display = 'block';
+    
+    if (showLogin) {
+        showLoginForm();
+    } else {
+        // Show signup by default, or login if they have account
+        hasAccount ? showLoginForm() : showSignupForm();
     }
 }
 
-setupSearchToggle('#searchicon1', '#searchinput1');
-setupSearchToggle('#searchicon2', '#searchinput2');
+function hideAuthSection() {
+    document.getElementById('auth').style.display = 'none';
+}
 
+function showLoginForm() {
+    document.getElementById('signup-form').style.display = 'none';
+    document.getElementById('login-form').style.display = 'block';
+}
+
+function showSignupForm() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('signup-form').style.display = 'block';
+}
+
+function checkLoginAndBook() {
+    if (isLoggedIn) {
+        window.location.href = "#Book Table";
+    } else {
+        showAuthSection();
+        alert("Please log in or sign up to book a table.");
+    }
+}
+
+// Initialize
 document.addEventListener('DOMContentLoaded', function() {
-    const signupFormDiv = document.getElementById('signup-form');
-    const loginFormDiv = document.getElementById('login-form');
-    const loginLink = document.getElementById('login-link');
-    const signupLink = document.getElementById('signup-link');
-    const signupForm = document.getElementById('signupForm');
-    const loginForm = document.getElementById('loginForm');
+    // Check login status from storage
+    isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    hasAccount = localStorage.getItem('hasAccount') === 'true';
 
-    // Function to show login form and hide signup form
-    function showLoginForm() {
-        signupFormDiv.style.display = 'none';
-        loginFormDiv.style.display = 'block';
-    }
-
-    // Function to show signup form and hide login form
-    function showSignupForm() {
-        loginFormDiv.style.display = 'none';
-        signupFormDiv.style.display = 'block';
-    }
-
-    // Event listener for login link
-    loginLink.addEventListener('click', function(e) {
+    // Form toggle links
+    document.getElementById('login-link').addEventListener('click', function(e) {
         e.preventDefault();
         showLoginForm();
     });
-
-    // Event listener for signup link
-    signupLink.addEventListener('click', function(e) {
+    
+    document.getElementById('signup-link').addEventListener('click', function(e) {
         e.preventDefault();
         showSignupForm();
     });
 
-    // Event listener for signup form submission
-    signupForm.addEventListener('submit', function(e) {
+    // Form submissions
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        // Handle signup logic here
-        console.log('Signup form submitted');
+        isLoggedIn = true;
+        localStorage.setItem('isLoggedIn', 'true');
+        hideAuthSection();
+        alert('Login successful!');
+    });
+    
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        hasAccount = true;
+        localStorage.setItem('hasAccount', 'true');
+        showLoginForm();
+        alert('Signup successful! Please login.');
     });
 
-    // Event listener for login form submission
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Handle login logic here
-        console.log('Login form submitted');
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        const authSection = document.getElementById('auth');
+        if (authSection.style.display === 'block' && 
+            !e.target.closest('.auth-container') && 
+            !e.target.matches('[onclick*="showAuthSection"], [onclick*="checkLoginAndBook"]')) {
+            hideAuthSection();
+        }
     });
-
-    // Initially show the signup form
-    showSignupForm();
 });
 
 // ** Mobile Menu **

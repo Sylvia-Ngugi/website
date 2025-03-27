@@ -79,6 +79,67 @@ html {
     scroll-behavior: smooth;
 }
 
+.auth-section {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center; /* Center the forms */
+    max-width: 600px; /* Reduced max-width for better centering */
+    margin: 0 auto;
+}
+
+.login-form, .signup-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%; /* Forms take full width */
+    max-width: 400px; /* Set a maximum width */
+    margin: 10px; /* Add some margin */
+}
+
+.login-form h2, .signup-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Center the heading */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style for links */
+.login-form p, .signup-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form a, .signup-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form a:hover, .signup-form a:hover {
+    text-decoration: underline;
+}
+
+
 .home {
     background-color: rgb(243, 232, 217);
     padding: 0 7vw;

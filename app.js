@@ -16,6 +16,55 @@
 setupSearchToggle('#searchicon1', '#searchinput1');
 setupSearchToggle('#searchicon2', '#searchinput2');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const signupFormDiv = document.getElementById('signup-form');
+    const loginFormDiv = document.getElementById('login-form');
+    const loginLink = document.getElementById('login-link');
+    const signupLink = document.getElementById('signup-link');
+    const signupForm = document.getElementById('signupForm');
+    const loginForm = document.getElementById('loginForm');
+
+    // Function to show login form and hide signup form
+    function showLoginForm() {
+        signupFormDiv.style.display = 'none';
+        loginFormDiv.style.display = 'block';
+    }
+
+    // Function to show signup form and hide login form
+    function showSignupForm() {
+        loginFormDiv.style.display = 'none';
+        signupFormDiv.style.display = 'block';
+    }
+
+    // Event listener for login link
+    loginLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showLoginForm();
+    });
+
+    // Event listener for signup link
+    signupLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSignupForm();
+    });
+
+    // Event listener for signup form submission
+    signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Handle signup logic here
+        console.log('Signup form submitted');
+    });
+
+    // Event listener for login form submission
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Handle login logic here
+        console.log('Login form submitted');
+    });
+
+    // Initially show the signup form
+    showSignupForm();
+});
 
 // ** Mobile Menu **
 const bar = document.querySelector('.fa-bars');

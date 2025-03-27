@@ -8,7 +8,7 @@
     <title>DineWithSly |Home</title>
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="./faviconlogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Images/faviconlogo.png" type="image/x-icon">
 
     <!--Font Awesome CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -37,6 +37,7 @@
                         <li><a href="#Food Menu">Food Menu</a></li>
                         <li><a href="#Book Table">Book Table</a></li>
                         <li><a href="#Make Payment">Make Payment</a></li>
+                        <li><a href="#auth">Login/Signup</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,6 +46,34 @@
         </div>
     </header>
 
+<!-- Login and Signup Section -->
+<div class="auth-section" id="auth">
+    <div class="auth-container">
+        <div class="signup-form" id="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="red_btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+        </div>
+
+        <div class="login-form" id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="red_btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+
+    
     <div class="home" id="Home">
         <div class="main_slide">
             <div>

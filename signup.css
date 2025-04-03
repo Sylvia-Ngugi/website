@@ -1,0 +1,94 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+#main > h1 {
+    margin-bottom: 8%;
+    text-align: center;
+    color: #00107b;
+    letter-spacing: 0.1em;
+}
+
+.p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+}
+
+.p span {
+    background: #fff;
+    padding: 0 10px;
+}
+
+input {
+    margin-bottom: 3%;
+    max-width: 550px; /* Maximum width for input fields */
+}
+
+input:last-of-type {
+    margin-bottom: 0;
+}
+
+input,
+button {
+    padding: 3%;
+    width: 100%; /* Full width for input and buttons */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-container {
+    background-color: white;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 40vw;
+    max-width: 500px; /* Optional: max-width to prevent it from becoming too wide */
+    margin: auto;
+    height: auto; /* Allow height to adjust based on content */
+    margin-top: 6vh;
+    border-radius: 6px;
+}
+
+#submit,
+#create-acct-btn,
+#sign-up {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: #7b3f00;
+    margin-top: 5%;
+    color: #fff;
+    cursor: pointer; /* Pointer cursor on buttons */
+    transition: 0.8s; /* Smooth transition for background color */
+}
+
+button {
+    max-width: 100%; /* Full width for buttons */
+    margin: auto; /* Center the buttons */
+}
+
+#submit:hover,
+#create-acct-btn:hover,
+#sign-up:hover {
+    background: transparent;
+    border: 1px solid #7b3f00;
+    color: #000000;
+}
+
+
+#create-acct {
+    display: none; /* Hide the account creation section initially */
+}
+
+#return-btn {
+    background: none;
+    color: grey;
+    text-decoration: underline;
+    border: none;
+    margin-top: 3%;
+    cursor: pointer; /* Pointer cursor on return button */
+}
+
+
